@@ -51,10 +51,7 @@ impl Render for Element {
             TagType::Orphan => format!("<{}>", tag),
             TagType::Slash => format!("<{} />", tag),
             TagType::DocType => {
-                format!(
-                    "<!DOCTYPE html><{}>{}</{}>",
-                    tag, self.content, self.name
-                )
+                format!("<!DOCTYPE html><{}>{}</{}>", tag, self.content, self.name)
             }
         }
     }
@@ -141,11 +138,7 @@ impl Element {
         self
     }
 
-    pub fn attr(
-        mut self,
-        key: impl Into<String>,
-        value: impl Into<String>,
-    ) -> Self {
+    pub fn attr(mut self, key: impl Into<String>, value: impl Into<String>) -> Self {
         self.attrs
             .push(format!("{}=\"{}\"", key.into(), value.into()));
         self
@@ -211,6 +204,10 @@ impl Element {
 
     pub fn r#for(self, value: impl Into<String>) -> Self {
         self.attr("for", value)
+    }
+
+    pub fn colspan(self, value: impl Into<String>) -> Self {
+        self.attr("colspan", value)
     }
 }
 
