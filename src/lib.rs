@@ -205,6 +205,10 @@ impl Element {
         self.attr("autoplay", value)
     }
 
+    pub fn charset(self, value: impl Render) -> Self {
+        self.attr("charset", value)
+    }
+
     pub fn checked(self) -> Self {
         self.orphan_attr("checked")
     }
@@ -669,6 +673,10 @@ pub fn s() -> Element {
 
 pub fn samp() -> Element {
     Element::new("samp")
+}
+
+pub fn script() -> Element {
+    Element::new("script")
 }
 
 pub fn section() -> Element {
