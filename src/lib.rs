@@ -395,6 +395,10 @@ pub fn html() -> Element {
     Element::new("html").doctype()
 }
 
+pub fn a() -> Element {
+    Element::new("a")
+}
+
 pub fn abbr() -> Element {
     Element::new("abbr")
 }
