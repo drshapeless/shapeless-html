@@ -197,16 +197,16 @@ impl Element {
         self.attr("autocomplete", value)
     }
 
-    pub fn autofocus(self, value: impl Render) -> Self {
-        self.attr("autofocus", value)
+    pub fn autofocus(self) -> Self {
+        self.orphan_attr("autofocus")
     }
 
     pub fn autoplay(self, value: impl Render) -> Self {
         self.attr("autoplay", value)
     }
 
-    pub fn checked(self, value: impl Render) -> Self {
-        self.attr("checked", value)
+    pub fn checked(self) -> Self {
+        self.orphan_attr("checked")
     }
 
     pub fn contenteditable(self, value: impl Render) -> Self {
@@ -333,24 +333,24 @@ impl Element {
         self.attr("placeholder", value)
     }
 
-    pub fn readonly(self, value: impl Render) -> Self {
-        self.attr("readonly", value)
+    pub fn readonly(self) -> Self {
+        self.orphan_attr("readonly")
     }
 
     pub fn rel(self, value: impl Render) -> Self {
         self.attr("rel", value)
     }
 
-    pub fn required(self, value: impl Render) -> Self {
-        self.attr("required", value)
+    pub fn required(self) -> Self {
+        self.orphan_attr("required")
     }
 
     pub fn rows(self, value: impl Render) -> Self {
         self.attr("rows", value)
     }
 
-    pub fn selected(self, value: impl Render) -> Self {
-        self.attr("selected", value)
+    pub fn selected(self) -> Self {
+        self.orphan_attr("selected")
     }
 
     pub fn src(self, value: impl Render) -> Self {
